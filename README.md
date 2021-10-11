@@ -9,9 +9,9 @@ For our Lagger & Snake Game we need to have some conditionnals to know what are 
 
 ### Description
 
-Only use playground to develope the logical game
-Print your result on your console area
-Upload to this repo as a Pu
+* Only use playground to develope the logical game
+* Print your result on your console area
+* Upload your project to your own GitHub Repo and make a pull Request
 
 ### DeadLine
 
