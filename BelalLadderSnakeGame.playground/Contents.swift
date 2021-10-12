@@ -1,30 +1,54 @@
 let dice = 1
 let squareLocation = 6
-let player = dice + squareLocation
+let bord = 25
+let bordNumber = dice + squareLocation
+if (dice >= 1) && (dice < 7) {
+    print("you're dice number is \(dice)")
+}else {
+    print("Invaled dice number")
+}
 let ladder = "You're on ladder move up to square number"
 let snake = "You're on snake move down square number"
-let bord = 25
-if (bord <= 25) {
-    print("You're in the game")
+if (bordNumber > bord) {
+    print("You are in the bord")
 }else {
-    print("You're out of the game")
+    print("You are out the bord")
 }
-if (player == 3) {
-    print("\(ladder) 11")
-}else if player == 6 {
-    print("\(ladder) 17")
-}else if player == 9 {
-    print("\(ladder) 18")
-}else if player == 10 {
-    print("\(ladder) 12")
-}else if player == 14 {
-    print("\(snake) 4")
-}else if player == 19 {
-    print("\(snake) 8")
-}else if player == 22 {
-    print("\(snake) 20")
-}else if player == 24 {
-    print("\(snake) 16")
-}else {
-    print("You are in square number \(player)")
+var squareState = ""
+switch squareState {
+case "Ladder":
+    if (bordNumber == 3) || (bordNumber == 6) || (bordNumber == 9) || (bordNumber == 10){
+        if (bordNumber == 3) {
+            print("\(ladder) 11")
+        }
+        if (bordNumber == 6) {
+            print("\(ladder) 17")
+        }
+        if (bordNumber == 9) {
+            print("\(ladder) 18")
+        }
+        if (bordNumber == 10) {
+            print("\(ladder) 12")
+        }
+    }else {
+        print("Do nothing")
+    }
+case "Snake" :
+    if (bordNumber == 14) || (bordNumber == 19) || (bordNumber == 22) || (bordNumber == 24) {
+        if (bordNumber == 14) {
+            print("\(snake) 4")
+        }
+        if (bordNumber == 19) {
+            print("\(snake) 8")
+        }
+        if (bordNumber == 22) {
+            print("\(snake) 20")
+        }
+        if (bordNumber == 24) {
+            print("\(snake) 16")
+        }else {
+            print("Do nothing")
+        }
+    }
+default: print("you're bord number is \(bordNumber)")
 }
